@@ -1,0 +1,49 @@
+{
+  "name": "moneyexchange.bottlejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "coverage": "nyc npm run test",
+    "lint": "eslint ./",
+    "verify": "npm run lint && npm run test",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wchopite/moneyexchange.bottlejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wchopite/moneyexchange.bottlejs/issues"
+  },
+  "homepage": "https://github.com/wchopite/moneyexchange.bottlejs#readme",
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "bcrypt": "^3.0.6",
+    "bottlejs": "^1.7.2",
+    "config": "^3.2.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^3.19.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.5",
+    "morgan": "^1.9.1",
+    "redis": "^2.8.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.0.1",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  }
+}
