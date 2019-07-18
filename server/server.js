@@ -21,16 +21,16 @@ const Server = (logger, _app) => {
 
   server = app;
 
+  server.registerEndpoints = (routes) => {
+    routes.$list().map(r => routes[r]);
+    return;
+  };
+
   server.start = () => {
     app.listen(port, () => {
       logger.info(`${config.get('server.name')} service started`);
       logger.info(`Listening on port ${port}`);
     });
-  };
-
-  server.registerRoutes = (routes) => {
-    routes.$list().map(r => routes[r]);
-    return;
   };
 
   return server;
