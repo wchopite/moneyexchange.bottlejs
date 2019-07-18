@@ -1,4 +1,4 @@
-const CoinsController = (coinModel, logger) => {
+const CoinsController = (coinsModel, logger) => {
   const coinsController = {};
 
   coinsController.index = (req, res) => {
@@ -7,7 +7,7 @@ const CoinsController = (coinModel, logger) => {
 
   coinsController.listCoins = (req, res) => {
     logger.info('Listing all coins registered');
-    res.json(coinModel.list());
+    res.json(coinsModel.list());
   };
 
   return coinsController;

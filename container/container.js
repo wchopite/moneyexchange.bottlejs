@@ -3,19 +3,18 @@
  * https://www.npmjs.com/package/bottlejs
  */
 const Bottle = require('bottlejs'); // Dependency Injection Container
-const bottle = new Bottle();
+const container = new Bottle();
 
-// Utils
-const utils = require('../api/utils');
+// Server
+const server = require('../server/server');
 
-// Controllers
-const coinsControllerFactory = require('../api/controllers/coinsController');
+const helpers = require('./container.helpers');
+const controllers = require('./container.controllers');
+const models = require('./container.models');
 
-// Models
-const coinModelFactory = require('../api/models/coinModel');
+container.constant('helpers', helpers);
+container.serviceFactory('server', server, 'helpers.logger');
+container.serviceFactory('coinsModel', models.coinsModel);
+container.serviceFactory('coinsController', controllers.coinsController, 'coinsModel', 'helpers.logger');
 
-bottle.constant('utils', utils);
-bottle.serviceFactory('coinModel', coinModelFactory);
-bottle.serviceFactory('coinsController', coinsControllerFactory, 'coinModel', 'utils.logger');
-
-module.exports = bottle.container;
+module.exports = container.container;
