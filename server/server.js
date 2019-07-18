@@ -6,7 +6,6 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const debug = require('debug')('app:startup');
-
 require('express-async-errors');
 
 const Server = (logger, app) => {
@@ -27,6 +26,12 @@ const Server = (logger, app) => {
       logger.info(`Listening on port ${port}`);
     });
   };
+
+  server.registerRoutes = (routes) => {
+    routes.$list().map(r => routes[r]);
+    return;
+  };
+
   return server;
 };
 
@@ -61,9 +66,10 @@ function setGlobalHealthCheck({app}) {
 }
 
 function setGlobalErrorManagement({app, logger}) {
-  app.use((error, req, res) => {
+  app.use((error, req, res, next) => {
     logger.error(error.message, error);
     res.status(500).json({ message: 'Error', error: error.message });
+    next();
   });
   return;
 }

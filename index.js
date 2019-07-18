@@ -1,3 +1,4 @@
 const container = require('./container/container');
 
-container.server.start();
+container.Server.registerRoutes(container.AppRoutes);
+container.Server.start();

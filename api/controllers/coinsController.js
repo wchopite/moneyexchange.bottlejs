@@ -5,7 +5,7 @@ const CoinsController = (coinsModel, logger) => {
     res.json({ message: 'coinsController.index' });
   };
 
-  coinsController.listCoins = (req, res) => {
+  coinsController.list = (req, res) => {
     logger.info('Listing all coins registered');
     res.json(coinsModel.list());
   };
