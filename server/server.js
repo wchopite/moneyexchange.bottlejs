@@ -8,20 +8,21 @@ const morgan = require('morgan');
 const debug = require('debug')('app:startup');
 require('express-async-errors');
 
-const Server = (logger, app) => {
+// TODO: Make the Server less dependent from express js
+const Server = (logger, _app) => {
   let server;
-  const _app = app || express();
+  const app = _app || express();
   const port = process.env.PORT || config.get('server.port');
 
-  setMiddlewares({app: _app});
-  setGlobalHealthCheck({app: _app});
-  setGlobalErrorManagement({app: _app, logger});
-  enableDevelopmentMode({app: _app});
+  setMiddlewares({app});
+  setGlobalHealthCheck({app});
+  setGlobalErrorManagement({app, logger});
+  enableDevelopmentMode({app});
 
-  server = _app;
+  server = app;
 
   server.start = () => {
-    _app.listen(port, () => {
+    app.listen(port, () => {
       logger.info(`${config.get('server.name')} service started`);
       logger.info(`Listening on port ${port}`);
     });
