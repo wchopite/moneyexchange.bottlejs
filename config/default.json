@@ -1,0 +1,6 @@
+{
+  "server": {
+    "name": "MoneyExchange Server",
+    "port": 8080
+  }
+}

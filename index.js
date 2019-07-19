@@ -1,12 +1,4 @@
-const express = require('express');
+const container = require('./container/container');
 
-const app = express();
-const PORT = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Ok' });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+container.Server.registerEndpoints(container.AppRoutes);
+container.Server.start();
