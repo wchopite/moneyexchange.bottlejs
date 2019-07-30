@@ -14,10 +14,13 @@ const models = require('./container.models');
 const routes = require('./container.routes');
 
 container.constant('helpers', helpers);
+
 container.serviceFactory('Server', server, 'helpers.logger');
 
-container.serviceFactory('AppModel.coinsModel', models.coinsModel);
-container.serviceFactory('AppController.coinsController', controllers.coinsController, 'AppModel.coinsModel', 'helpers.logger');
-container.serviceFactory('AppRoutes.coinsRoutes', routes.coinsRoutes, 'Server', 'AppController.coinsController');
+container.serviceFactory('AppRoutes.coinsRoutes', routes.coinsRoutes, 'Server', 'Controllers.coinsController');
+
+container.serviceFactory('Models.coinsModel', models.coinsModel);
+
+container.serviceFactory('Controllers.coinsController', controllers.coinsController, 'Models.coinsModel', 'helpers.logger');
 
 module.exports = container.container;
