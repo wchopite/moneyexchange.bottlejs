@@ -1,3 +1,4 @@
 module.exports = {
-  'coinsRoutes': require('../api/routes/coinsRoutes')
+  'coinsRoutes': require('../api/routes/coinsRoutes'),
+  'conversionsRoutes': require('../api/routes/conversionsRoutes')
 };

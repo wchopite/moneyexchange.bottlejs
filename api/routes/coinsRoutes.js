@@ -1,3 +1,3 @@
 module.exports = (app, coinsController) => {
-  app.get(`/coins`, coinsController.list);
+  app.get(`/api/coins`, coinsController.list);
 };
