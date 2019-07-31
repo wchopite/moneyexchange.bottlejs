@@ -1,0 +1,10 @@
+[
+  {
+    "base" : "USD",
+    "to" : "EUR",
+    "conversionFactor" : 0.90,
+    "date" : 1564581391869.0,
+    "createdAt" : "2019-07-31T13:56:31.873Z",
+    "__v" : 0
+  }
+]

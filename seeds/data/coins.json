@@ -1,0 +1,16 @@
+[
+  {
+    "name" : "Dolar",
+    "description" : "Dolar",
+    "code" : "USD",
+    "symbol" : "$",
+    "date" : "2019-07-30T19:16:39.080Z"
+  },
+  {
+    "name" : "Euro",
+    "description" : "Euro",
+    "code" : "EUR",
+    "symbol" : "€",
+    "date" : "2019-07-30T19:16:39.080Z"
+  }
+]
