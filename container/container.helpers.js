@@ -1,5 +1,6 @@
 const helpers = require('../api/helpers');
 
 module.exports = {
-  logger: helpers.logger
+  logger: helpers.logger,
+  conversor: helpers.conversor
 };

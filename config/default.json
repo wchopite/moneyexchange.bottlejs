@@ -2,5 +2,19 @@
   "server": {
     "name": "MoneyExchange Server",
     "port": 8080
+  },
+  "DB": {
+    "url": "mongodb://localhost/moneyExchange",
+    "options": {
+      "useNewUrlParser": true
+    }
+  },
+  "conversor": {
+    "roundTo": 4,
+    "operator": "*"
+  },
+  "JWT": {
+    "private_key": "secret",
+    "expirationTime": "1h"
   }
 }

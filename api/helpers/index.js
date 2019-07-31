@@ -1,7 +1,9 @@
 const logger = require('./logger');
+const conversor = require('./conversor');
 
 const utils = {
-  logger
+  logger,
+  conversor
 };
 
 module.exports = utils;

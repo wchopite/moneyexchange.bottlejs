@@ -8,8 +8,7 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {
-      "ecmaVersion": 8,
-      "experimentalObjectRestSpread": true
+      "ecmaVersion": 8
     },
     "sourceType": "module"
   },
