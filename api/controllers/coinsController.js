@@ -1,16 +1,13 @@
 const CoinsController = (coinsModel, logger) => {
   const coinsController = {};
 
-  coinsController.index = (req, res) => {
-    res.json({ message: 'coinsController.index' });
-  };
-
-  coinsController.list = (req, res) => {
+  coinsController.list = async (req, res) => {
     logger.info('Listing all coins registered');
-    res.json(coinsModel.list());
+    const coins = await coinsModel.find({}).sort('name');
+    res.json(coins);
   };
 
   return coinsController;
-}
+};
 
 module.exports = CoinsController;

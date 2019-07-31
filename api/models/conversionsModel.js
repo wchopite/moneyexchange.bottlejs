@@ -3,21 +3,21 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const coinSchema = new Schema({
-  name: {
+const conversionSchema = new Schema({
+  base: {
     type: String,
     required: true
   },
-  description: {
+  to: {
     type: String,
     required: false
   },
-  code: {
-    type: String,
+  conversionFactor: {
+    type: Number,
     required: true
   },
-  symbol: {
-    type: String,
+  date: {
+    type: Number,
     required: true
   },
   createdAt: {
@@ -27,5 +27,5 @@ const coinSchema = new Schema({
 });
 
 module.exports = () => {
-  return mongoose.model('Coin', coinSchema);
+  return mongoose.model('CoinsConversion', conversionSchema);
 };
