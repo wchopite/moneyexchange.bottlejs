@@ -52,3 +52,7 @@
 ```bash
 npm install & npm start
 ```
+
+# Important Notes
+
+## The code use a Dependency Injection Container (bottlejs). All the dependencies for every part of the code, is configured and added in the container/container.js file. For more information about the use of bottlejs visit https://www.npmjs.com/package/bottlejs
