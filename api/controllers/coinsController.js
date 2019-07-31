@@ -8,6 +8,6 @@ const CoinsController = (coinsModel, logger) => {
   };
 
   return coinsController;
-}
+};
 
 module.exports = CoinsController;

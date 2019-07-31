@@ -1,4 +1,7 @@
+const coinsController = require('../api/controllers/coinsController');
+const conversionsController = require('../api/controllers/conversionsController');
+
 module.exports = {
-  'coinsController': require('../api/controllers/coinsController'),
-  'conversionsController': require('../api/controllers/conversionsController')
+  coinsController,
+  conversionsController
 };

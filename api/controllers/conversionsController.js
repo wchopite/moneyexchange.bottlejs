@@ -3,9 +3,9 @@ const ConversionsController = (conversionsModel, logger) => {
 
   conversionsController.convert = async (req, res) => {
     res.json({ status: 'ok' });
-  }
+  };
 
   return conversionsController;
-}
+};
 
 module.exports = ConversionsController;

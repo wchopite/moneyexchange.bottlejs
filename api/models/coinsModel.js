@@ -1,5 +1,6 @@
 // Dependencies
 const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
 
 const coinSchema = new Schema({
@@ -27,4 +28,4 @@ const coinSchema = new Schema({
 
 module.exports = () => {
   return mongoose.model('Coin', coinSchema);
-}
+};

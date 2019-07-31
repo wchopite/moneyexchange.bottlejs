@@ -1,4 +1,7 @@
+const coinsRoutes = require('../api/routes/coinsRoutes');
+const conversionsRoutes = require('../api/routes/conversionsRoutes');
+
 module.exports = {
-  'coinsRoutes': require('../api/routes/coinsRoutes'),
-  'conversionsRoutes': require('../api/routes/conversionsRoutes')
+  coinsRoutes,
+  conversionsRoutes
 };

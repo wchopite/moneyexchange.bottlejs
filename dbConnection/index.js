@@ -12,5 +12,5 @@ module.exports = (url, options) => {
     close() {
       return mongoose.disconnect();
     }
-  }
+  };
 };

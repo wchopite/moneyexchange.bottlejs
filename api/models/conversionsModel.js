@@ -1,5 +1,6 @@
 // Dependencies
 const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
 
 const conversionSchema = new Schema({
@@ -27,4 +28,4 @@ const conversionSchema = new Schema({
 
 module.exports = () => {
   return mongoose.model('CoinsConversion', conversionSchema);
-}
+};

@@ -10,9 +10,11 @@ const log = winston.createLogger({
 });
 
 if (process.env.NODE_ENV !== 'production') {
-  log.add(new winston.transports.Console({
-    format: winston.format.simple()
-  }));
+  log.add(
+    new winston.transports.Console({
+      format: winston.format.simple()
+    })
+  );
 }
 
 const Logger = {
