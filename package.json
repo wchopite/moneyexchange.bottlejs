@@ -24,7 +24,7 @@
   "homepage": "https://github.com/wchopite/moneyexchange.bottlejs#readme",
   "dependencies": {
     "ajv": "^6.10.2",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bottlejs": "^1.7.2",
     "color": "^3.1.2",
     "config": "^3.2.0",
